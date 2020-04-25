@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name" translatable="false">Soul Doctor</string>
+
+    <string name="waiting_for_help">فى إنتظار المساعدة…</string>
+    <string name="ahmed_shoman">د. أحمد شومان</string>
+
+    <string name="incoming_call">إتصال وارد</string>
+    <string name="answer">رد</string>
+    <string name="decline">رفض</string>
+    <string name="end_call">إنهاء المكالمة</string>
+</resources>

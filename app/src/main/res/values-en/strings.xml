@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="waiting_for_help">Waiting for Help…</string>
+    <string name="ahmed_shoman">Dr. Ahmed Shoman</string>
+
+    <string name="incoming_call">Incoming Call</string>
+    <string name="answer">Answer</string>
+    <string name="decline">Decline</string>
+    <string name="end_call">End Call</string>
+</resources>

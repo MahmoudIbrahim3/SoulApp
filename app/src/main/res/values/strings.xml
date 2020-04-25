@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Soul</string>
+
+    <string name="user_corona">فايروس كوفيد 19</string>
+    <string name="user_emergency">الإتصال بالطوارئ</string>
+    <string name="user_select_doctor">إختر دكتور</string>
+    <string name="or">أو</string>
+
+    <string name="available_doctors">الأطباء المتاحين</string>
+
+    <string name="incoming_call">إتصال وارد</string>
+    <string name="answer">رد</string>
+    <string name="decline">رفض</string>
+    <string name="end_call">إنهاء المكالمة</string>
+
+    <string name="arabic" translatable="false">عربى</string>
+    <string name="english" translatable="false">English</string>
+
+    <string name="call_ended">تم إنهاء المكالمة</string>
+
+    <string name="doctor_label">د. أحمد شومان</string>
+    <string name="hi_msg">اهلا أحمد</string>
+
+    <string-array name="doctors">
+        <item>دكتور أحمد شومان</item>
+        <item>دكتور محمد الهادي</item>
+        <item>دكتور عبدالرحمن أبوزهرة</item>
+        <item>دكتور خضر منصور</item>
+        <item>دكتور أحمد هارون</item>
+        <item>دكتور محسن الهيثم</item>
+        <item>دكتور ممتاز العمرى</item>
+        <item>دكتورة نورالهدي محمود</item>
+        <item>دكتور حسن رضا</item>
+        <item>دكتور كمال فهمي</item>
+        <item>دكتور فؤاد خليل</item>
+        <item>دكتور ياسر فاروق</item>
+    </string-array>
+
+    <string-array name="departments">
+        <item>أمراض باطنة</item>
+        <item>جلدية</item>
+        <item>أسنان</item>
+        <item>مخ وأعصاب</item>
+        <item>عظام</item>
+        <item>أنف وأذن وحنجرة</item>
+        <item>نساء وتوليد</item>
+        <item>قلب وأوعية دموية</item>
+        <item>أمراض دم</item>
+        <item>نفسي</item>
+        <item>أطفال وحديث الولادة</item>
+        <item>عظام</item>
+    </string-array>
+</resources>

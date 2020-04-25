@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.saul">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app_icon2"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_app_icon2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".AppController">
+
+        <service android:name=".video.SinchService"/>
+
+        <activity android:name=".video.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".video.CallScreenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".video.IncomingCallScreenActivity"
+            android:noHistory="true"/>
+        <activity android:name=".video.PlaceCallActivity"/>
+        <activity android:name=".doctorslist.DoctorsFragment"/>
+
+    </application>
+
+</manifest>

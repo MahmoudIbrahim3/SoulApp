@@ -3,6 +3,7 @@ package com.soul.doctor.video;
 import com.sinch.android.rtc.calling.Call;
 import com.soul.doctor.R;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.core.app.ActivityCompat;
 
 public class PlaceCallActivity extends BaseActivity {
 
@@ -29,6 +32,13 @@ public class PlaceCallActivity extends BaseActivity {
 
         Button stopButton = (Button) findViewById(R.id.stopButton);
         stopButton.setOnClickListener(buttonClickListener);
+
+
+        ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.RECORD_AUDIO,
+                        Manifest.permission.READ_PHONE_STATE,
+                        Manifest.permission.CAMERA}, 0);
+
     }
 
     @Override

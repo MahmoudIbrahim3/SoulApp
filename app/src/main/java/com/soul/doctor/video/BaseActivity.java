@@ -1,5 +1,6 @@
 package com.soul.doctor.video;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -32,6 +33,8 @@ public abstract class BaseActivity extends Activity implements ServiceConnection
                         | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
                         | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
                         | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+
+
     }
 
     @Override
@@ -81,7 +84,7 @@ public abstract class BaseActivity extends Activity implements ServiceConnection
             granted &= grantResult == PackageManager.PERMISSION_GRANTED;
         }
         if (granted) {
-            Toast.makeText(this, "You may now place a call", Toast.LENGTH_LONG).show();
+//            Toast.makeText(this, "You may now place a call", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, "This application needs permission to use your microphone and camera to function properly.", Toast.LENGTH_LONG).show();
         }

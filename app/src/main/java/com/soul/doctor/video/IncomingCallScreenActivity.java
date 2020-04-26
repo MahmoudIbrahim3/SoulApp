@@ -23,6 +23,12 @@ public class IncomingCallScreenActivity extends BaseActivity {
     private AudioPlayer mAudioPlayer;
     private boolean mAcceptVideo = true;
 
+    public static final String ACTION_ANSWER = "answer";
+    public static final String ACTION_IGNORE = "ignore";
+    public static final String EXTRA_ID = "id";
+    public static int MESSAGE_ID = 14;
+    private String mAction;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +51,14 @@ public class IncomingCallScreenActivity extends BaseActivity {
             call.addCallListener(new SinchCallListener());
             TextView remoteUser = (TextView) findViewById(R.id.remoteUser);
             remoteUser.setText(call.getRemoteUserId());
+
+            if (ACTION_ANSWER.equals(mAction)) {
+                mAction = "";
+                answerClicked();
+            } else if (ACTION_IGNORE.equals(mAction)) {
+                mAction = "";
+                declineClicked();
+            }
 
         } else {
             Log.e(TAG, "Started with invalid callId, aborting");

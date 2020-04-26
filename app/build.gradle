@@ -48,4 +48,7 @@ dependencies {
     implementation "com.skyfishjy.ripplebackground:library:1.0.1"
     implementation(name: 'sinch-android-rtc', version: '+', ext: 'aar')
     implementation 'com.google.android.material:material:1.1.0'
+    implementation "com.google.firebase:firebase-messaging:20.1.6"
+
 }
+apply plugin: 'com.google.gms.google-services'

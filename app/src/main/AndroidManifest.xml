@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.soul.doctor">
 
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false"/>
+
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
@@ -15,9 +19,22 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_app_icon2"
         android:supportsRtl="false"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".AppSoul">
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="Sinch Push Notification Channel"/>
 
         <service android:name=".video.SinchService"/>
+
+        <service
+            android:name=".fcm.FcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <activity android:name=".video.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
